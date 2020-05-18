@@ -1,0 +1,79 @@
+﻿信息系统与数据库技术练习11题卡
+
+班级：信息管理2班
+姓名：黄家福
+学号：20190307227
+
+*注：排除答案放置在序号下方。* /
+
+（一）
+1。
+使用项目
+
+
+2。
+SELECT Pid，Ename，WorkDate，BasePay
+来自员工JOIN EP
+ON Employee.Eid = EP.Eid
+
+
+3。
+选择开斋节，工资，项目。*
+从EP JOIN项目
+开启EP.Pid = Project.Pid
+工资> 5000
+
+
+
+4。
+SELECT Department.Did，Dname，Eid，Ename，Esex
+来自部门加入员工
+开启Department.Did = Employee.Did
+埃塞克斯= 0
+
+
+5，
+选择Employee.Eid，Ename，Pid，Wages
+来自员工JOIN EP
+ON Employee.Eid = EP.Eid
+WHERE Ename ='陈燕玲'
+按工资ASC排序
+
+
+6。
+SELECT Did，Employee.Eid，Ename，Project.Pid，Pname，Wages
+来自Project JOIN EP JOIN员工
+ON EP.Eid = Employee.Eid
+ON Project.Pid = EP.Pid
+在哪里='D002'和Pname输入（'1＃'，'3＃'）
+
+7。
+SELECT Did，A.Eid，Ename，C.Pid，Pname，Wages
+从项目C加入EP B加入员工A
+ON B.Eid = A.Eid
+ON C.Pid = B.Pid
+在哪里='D002'和Pname输入（'1＃'，'3＃'）
+
+8。
+SELECT Employee.Eid，Ename，EP.Pid，Wages
+员工左加入EP
+ON Employee.Eid = EP.Eid
+
+9。
+SELECT EP.Eid，Wages，Project。*
+来自EP RIGHT JOIN项目
+开启EP.Pid = Project.Pid
+
+10。
+选择EP.Wages，Employee.Eid，Ename，Project。*
+从项目FULL JOIN EP FULL JOIN员工
+ON EP.Eid = Employee.Eid
+ON Project.Pid = EP.Pid
+
+
+11。
+SELECT Department.Did，Dname，Employee.Eid，Ename，Project.Pid，Pname，Wages
+来自部门JOIN员工JOIN EP JOIN项目
+开启EP.Pid = Project.Pid
+ON Employee.Eid = EP.Eid
+ON Department.Did = Employee.Did
